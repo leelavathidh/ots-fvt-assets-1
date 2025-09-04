@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.hcl.onetest.example</groupId>
+  <artifactId>ots-junit-example</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>ots-junit-example</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>tp-mvn-dev</id>
+      <name>Testing Products virtual repository (to consume from both maven central and from tp-mvn-dev-local)</name>
+      <url>https://us-artifactory1.nonprod.hclpnp.com/artifactory/tp-mvn-dev</url>
+    </repository>
+    <repository>
+      <id>tp-mvn-dev-local</id>
+      <name>Testing Products virtual repository (to consume from both maven central and from tp-mvn-dev-local)</name>
+      <url>https://us-artifactory1.nonprod.hclpnp.com/artifactory/tp-mvn-dev-local</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.7.1</version>
+        <scope>test</scope>
+	</dependency>
+    <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest</artifactId>
+        <version>2.2</version>
+        <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+      </plugin>
+    </plugins>
+  </build>
+  
+</project>

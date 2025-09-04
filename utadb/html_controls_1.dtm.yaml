@@ -1,0 +1,110 @@
+note: Generated from recorded traffic
+messages:
+  req:
+    includes:
+      - '#commonReq'
+    paths:
+      - headers:
+          - paths:
+              - Accept:
+                  - val: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+              - Upgrade-Insecure-Requests:
+                  - val: '1'
+  res:
+    includes:
+      - '#commonRes'
+    paths:
+      - headers:
+          - paths:
+              - Accept-Ranges:
+                  - val: bytes
+              - Content-Length:
+                  - val: '2323'
+              - Content-Type:
+                  - val: text/html
+              - ETag:
+                  - val: |-
+                      "0-913-661183ed"
+              - Last-Modified:
+                  - val: Sat, 06 Apr 2024 17:18:37 GMT
+      - content:
+          - src: blob/lqenca.html
+    cascade:
+      - url: /aries-web/Samples/htmlControls/style.css
+        request:
+          includes:
+            - '#commonReq'
+          paths:
+            - headers:
+                - paths:
+                    - Accept:
+                        - val: text/css,*/*;q=0.1
+                    - Referer:
+                        - val: http://civcez229.nonprod.hclpnp.com/aries-web/Samples/htmlControls/controls.html
+        response:
+          paths:
+            - headers:
+                - paths:
+                    - Accept-Ranges:
+                        - val: bytes
+                    - Content-Length:
+                        - val: '909'
+                    - Content-Type:
+                        - val: text/css
+                    - Date:
+                        - val: Fri, 19 Apr 2024 06:26:34 GMT
+                    - ETag:
+                        - val: |-
+                            "0-38d-660cf664"
+                    - Last-Modified:
+                        - val: Wed, 03 Apr 2024 06:25:40 GMT
+                    - Server:
+                        - val: Apache/1.3.23 (Win32)
+            - content:
+                - src: blob/qgl5ll.css
+      - url: /favicon.ico
+        request:
+          includes:
+            - '#commonReq'
+          paths:
+            - headers:
+                - paths:
+                    - Accept:
+                        - val: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+                    - Referer:
+                        - val: http://civcez229.nonprod.hclpnp.com/aries-web/Samples/htmlControls/controls.html
+        response:
+          paths:
+            - status-code:
+                - val: '404'
+            - headers:
+                - paths:
+                    - Content-Type:
+                        - val: text/html; charset=iso-8859-1
+                    - Date:
+                        - val: Fri, 19 Apr 2024 06:26:34 GMT
+                    - Server:
+                        - val: Apache/1.3.23 (Win32)
+            - content:
+                - src: blob/whgfpq.html
+  commonReq:
+    paths:
+      - headers/Accept-Encoding:
+          - val: gzip, deflate
+      - headers/Accept-Language:
+          - val: en-GB,en-US;q=0.9,en;q=0.8
+      - headers/Host:
+          - val: civcez229.nonprod.hclpnp.com
+      - headers/Proxy-Connection:
+          - val: keep-alive
+      - headers/User-Agent:
+          - val: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+              like Gecko) Chrome/123.0.0.0 Safari/537.36
+      - headers/content-length:
+          - val: '0'
+  commonRes:
+    paths:
+      - headers/Date:
+          - val: Fri, 19 Apr 2024 06:26:34 GMT
+      - headers/Server:
+          - val: Apache/1.3.23 (Win32)

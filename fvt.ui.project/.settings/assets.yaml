@@ -1,0 +1,309 @@
+name: fvt.ui.project
+version: 2
+projectReferences: 
+  - /ft.TraditionalHtmlTests
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /fvt.ui.project/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+      - name: CompoundTest_FT_HTMLTest_Shared_Dataset.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+'
+          name: CompoundTest_FT_HTMLTest_Shared_Dataset
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EE4293BF1D0580DC8CE26333663137
+        dependencies: 
+          - path: /ft.TraditionalHtmlTests/FT_HTMLTest_Shared_Dataset.testsuite
+            type: scheduleInvokedTest
+      - name: CompoundTest_Frame_HTML_PlaybackConvergence.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+'
+          name: CompoundTest_Frame_HTML_PlaybackConvergence
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EE4293E71AC0E0DC8CE26333663137
+        dependencies: 
+          - path: /ft.TraditionalHtmlTests/Frame_HTML_PlaybackConvergence.testsuite
+            type: scheduleInvokedTest
+      - name: CompoundTest_WebUITests.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	webui_basic_test
+
+	aries-web_iframestest_expectedFailure
+
+'
+          name: CompoundTest_WebUITests
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EDB2B9DB989FE0F051B56662643833
+        dependencies: 
+          - path: /fvt.ui.project/Tests/aries-web_iframestest_expectedFailure.testsuite
+            type: scheduleInvokedTest
+          - path: /fvt.ui.project/Tests/webui_basic_test.testsuite
+            type: scheduleInvokedTest
+          - path: /fvt.ui.project/browserSelection.varinit
+            type: scheduleVariableInitializationFile
+      - name: CompoundTest_WebUI_DatasetTests.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	webui_basic_test
+
+'
+          name: CompoundTest_WebUI_DatasetTests
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EDB2C0A6F76710F051B56662643833
+        dependencies: 
+          - path: /fvt.ui.project/Tests/webui_basic_test.testsuite
+            type: scheduleInvokedTest
+      - name: CompoundTest_WebUI_HTML5_Dataset.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	webui_HTML5_Dataset
+
+'
+          name: CompoundTest_WebUI_HTML5_Dataset
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EE941611E47400FC48B43337653863
+        dependencies: 
+          - path: /fvt.ui.project/Tests/webui_HTML5_Dataset.testsuite
+            type: scheduleInvokedTest
+      - name: CompoundTest_WebUI_NestedIframes.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	webui_NestedIframes
+
+'
+          name: CompoundTest_WebUI_NestedIframes
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EE9415DF9BAE50FC48B43337653863
+        dependencies: 
+          - path: /fvt.ui.project/Tests/webui_NestedIframes.testsuite
+            type: scheduleInvokedTest
+      - name: CompoundTest_iFrame_HTML_PlaybackConvergence.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+'
+          name: CompoundTest_iFrame_HTML_PlaybackConvergence
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EE42945187EE80DC8CE26333663137
+        dependencies: 
+          - path: /ft.TraditionalHtmlTests/iFrame_HTML_PlaybackConvergence.testsuite
+            type: scheduleInvokedTest
+  - name: Datasets
+    resources: 
+      - name: encryptedDataset.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/encryptedDataset.csv.metadata
+            type: datasetMetadata
+      - name: encryptedDataset.csv.metadata
+      - name: userdata.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/userdata.csv.metadata
+            type: datasetMetadata
+      - name: userdata.csv.metadata
+      - name: webui_basic_test_data.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/webui_basic_test_data.csv.metadata
+            type: datasetMetadata
+      - name: webui_basic_test_data.csv.metadata
+      - name: webui_basic_test_data_replacement.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/webui_basic_test_data_replacement.csv.metadata
+            type: datasetMetadata
+      - name: webui_basic_test_data_replacement.csv.metadata
+      - name: webui_encrypted_dataset.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/webui_encrypted_dataset.csv.metadata
+            type: datasetMetadata
+      - name: webui_encrypted_dataset.csv.metadata
+  - name: Results
+    resources: 
+  - name: Tests
+    resources: 
+      - name: StateValue.varinit
+        type: com.ibm.rational.test.lt.varinit
+      - name: aries-web_iframestest_expectedFailure.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDB2BC90415570F051B56662643833
+        dependencies: 
+          - path: /fvt.ui.project/b_Home_Page_139.ma
+            type: test#moeb.applicationPackage
+      - name: longwaittest_for_stop_exec.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1F01DC0933BEDF0EFB9B76265313662
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/webui_basic_test_data.csv
+            type: testDatapool
+          - path: /fvt.ui.project/b_Home_Page_139.ma
+            type: test#moeb.applicationPackage
+      - name: testwithlongwait.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EE14B62F6C63A0CD1DB36363313163
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/webui_basic_test_data.csv
+            type: testDatapool
+          - path: /fvt.ui.project/b_Home_Page_139.ma
+            type: test#moeb.applicationPackage
+      - name: webui_HTML5_Dataset(2).recsession
+        missing: true
+      - name: webui_HTML5_Dataset.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EE940A6F641D80FC48B43337653863
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/userdata.csv
+            type: testDatapool
+          - path: /fvt.ui.project/_hclpnp_com_e8d.ma
+            type: test#moeb.applicationPackage
+      - name: webui_JavaScript_Popups.recsession
+        missing: true
+      - name: webui_JavaScript_Popups.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EE9366358E9CB0FC48B43337653863
+        dependencies: 
+          - path: /fvt.ui.project/_hclpnp_com_716.ma
+            type: test#moeb.applicationPackage
+      - name: webui_NestedIframes.recsession
+        missing: true
+      - name: webui_NestedIframes.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EE93624A8C97B0FC48B43337653863
+        dependencies: 
+          - path: /fvt.ui.project/_hclpnp_com_dc3.ma
+            type: test#moeb.applicationPackage
+      - name: webui_basic_test.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDB2B4F50FBC60F051B56662643833
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/webui_basic_test_data.csv
+            type: testDatapool
+          - path: /fvt.ui.project/b_Home_Page_139.ma
+            type: test#moeb.applicationPackage
+      - name: webui_encrypted_dataset_test.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDB2B5A47614C6F051B56662643833
+        dependencies: 
+          - path: /fvt.ui.project/Datasets/webui_encrypted_dataset.csv
+            type: testDatapool
+          - path: /fvt.ui.project/b_Home_Page_139.ma
+            type: test#moeb.applicationPackage
+  - name: _hclpnp_com_6e9.ma
+    type: moeb.applicationPackage
+  - name: _hclpnp_com_716.ma
+    type: moeb.applicationPackage
+  - name: _hclpnp_com_89d.ma
+    type: moeb.applicationPackage
+  - name: _hclpnp_com_dc3.ma
+    type: moeb.applicationPackage
+  - name: _hclpnp_com_e8d.ma
+    type: moeb.applicationPackage
+  - name: b_Home_Page_139.ma
+    type: moeb.applicationPackage
+  - name: browserSelection.varinit
+    type: com.ibm.rational.test.lt.varinit
+  - name: dft
+    resources: 
+      - name: perf-docker-agent.location
+        type: com.ibm.rational.test.lt.location
+  - name: src
+    resources: 
+  - name: webuiaft_remotecluster1.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: '/fvt.ui.project/Compound Tests/CompoundTest_WebUI_HTML5_Dataset.testsuite'
+        type: aftsuite
+      - path: '/fvt.ui.project/Compound Tests/CompoundTest_WebUI_NestedIframes.testsuite'
+        type: aftsuite
+  - name: webuiaft_remotecluster2.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: '/fvt.ui.project/Compound Tests/CompoundTest_WebUI_HTML5_Dataset.testsuite'
+        type: aftsuite
+      - path: /fvt.ui.project/Tests/webui_NestedIframes.testsuite
+        type: aftsuite
+  - name: webuiaft_remotedockerhost.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: /fvt.ui.project/Tests/webui_JavaScript_Popups.testsuite
+        type: aftsuite
+      - path: /fvt.ui.project/Tests/webui_NestedIframes.testsuite
+        type: aftsuite
+  - name: webuiaft_staticdockeragent.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: /fvt.ui.project/Tests/webui_basic_test.testsuite
+        type: aftsuite
+  - name: webuitests_aftsuite.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: /fvt.ui.project/Tests/aries-web_iframestest_expectedFailure.testsuite
+        type: aftsuite
+      - path: /fvt.ui.project/Tests/webui_basic_test.testsuite
+        type: aftsuite

@@ -1,0 +1,81 @@
+name: DataFab
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /DataFab/src
+        type: javaClasspath
+  - name: DataFabTest.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/DataFabTest.csv.metadata
+        type: datasetMetadata
+  - name: DataFabTest.csv.metadata
+  - name: SimpleTest.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.0.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EDD9321B775130CEC2E43134383239
+    dependencies: 
+      - path: /DataFab/_google_com_f25.ma
+        type: test#moeb.applicationPackage
+      - path: /DataFab/doubleByteChars-dataset.csv
+        type: testDatapool
+      - path: /DataFab/stocksdata-dataset.csv
+        type: testDatapool
+  - name: _google_com_f25.ma
+    type: moeb.applicationPackage
+  - name: abc.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/abc.csv.metadata
+        type: datasetMetadata
+  - name: abc.csv.metadata
+  - name: bb.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/bb.csv.metadata
+        type: datasetMetadata
+  - name: bb.csv.metadata
+  - name: ccVisa-dataset.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/ccVisa-dataset.csv.metadata
+        type: datasetMetadata
+  - name: ccVisa-dataset.csv.metadata
+  - name: dd.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/dd.csv.metadata
+        type: datasetMetadata
+  - name: dd.csv.metadata
+  - name: doubleByteChars-dataset.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/doubleByteChars-dataset.csv.metadata
+        type: datasetMetadata
+  - name: doubleByteChars-dataset.csv.metadata
+  - name: encrypted-dataset.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/encrypted-dataset.csv.metadata
+        type: datasetMetadata
+  - name: encrypted-dataset.csv.metadata
+  - name: persons-dataset.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/persons-dataset.csv.metadata
+        type: datasetMetadata
+  - name: persons-dataset.csv.metadata
+  - name: src
+    resources: 
+  - name: stocksdata-dataset.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /DataFab/stocksdata-dataset.csv.metadata
+        type: datasetMetadata
+  - name: stocksdata-dataset.csv.metadata

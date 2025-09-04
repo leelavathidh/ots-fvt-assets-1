@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="N7B4408002BD11ED96EA90ED8E34BAFB" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/fvt.ui.project/Tests/aries-web_iframestest_expectedFailure.testsuite"/>
+            <test path="/fvt.ui.project/Tests/webui_basic_test.testsuite"/>
+        </tests>
+        <browsers>
+            <browser name="firefox"/>
+        </browsers>
+    </group>
+</inits>

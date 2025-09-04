@@ -1,0 +1,3 @@
+tests:
+  - ariesweb_basic_test.dtx.yaml
+  - aries-web_contest_page.dtx.yaml

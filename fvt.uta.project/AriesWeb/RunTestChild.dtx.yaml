@@ -1,0 +1,120 @@
+note: Generated from recorded traffic using edge 136.0.3240.92
+configuration:
+  profile: edge
+  vars:
+    APP_AriesWeb_URL:
+      expr: http://tp-fvtapps1.nonprod.hclpnp.com/aries-web/samples/visionofficeproducts/contest.htm
+      type: val
+      modifier: in
+    Street:
+      expr: street1
+      type: val
+      modifier: in
+    City:
+      expr: city1
+      type: val
+      modifier: in
+    State:
+      expr: state1
+      type: val
+      modifier: in
+    Zip:
+      expr: '333333'
+      type: val
+      modifier: in
+    Test_invar1:
+      expr: ''
+      type: val
+      modifier: in
+    Test_outVar:
+      expr: ''
+      modifier: out
+steps:
+  - open:
+      note: Open AriesWeb
+      url: '${APP_AriesWeb_URL}'
+  - with:
+      note: Contest page
+      steps:
+        - click:
+            shot: Contest page_33j6fo.dti.jpeg#68
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+        - type:
+            shot: Contest page_ytk3wg.dti.jpeg#126
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+            value: '${Street}'
+        - click:
+            shot: Contest page_qukrqy.dti.jpeg#246
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: City
+        - type:
+            shot: Contest page_l6bmfx.dti.jpeg#304
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: City
+            value: '${City}'
+        - click:
+            shot: Contest page_723i63.dti.jpeg#424
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State
+        - type:
+            shot: Contest page_qzrhxa.dti.jpeg#482
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State
+            value: '${State}'
+        - click:
+            shot: Contest page_fvbxfz.dti.jpeg#602
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Zip
+        - type:
+            shot: Contest page_jhasik.dti.jpeg#718
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Zip
+            value: '${Zip}'
+        - select:
+            shot: Contest page_nt7aod.dti.jpeg#784
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Position
+            value: Professional Staff
+        - click:
+            shot: Contest page_o4dwpj.dti.jpeg#850
+            object: html.inputradio
+            identifiers:
+              - properties:
+                  - value:
+                      - val: no
+        - click:
+            shot: Contest page_owdi5g.dti.jpeg#919
+            object: html.inputreset
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Reset

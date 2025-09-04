@@ -1,0 +1,174 @@
+note: Generated from recorded traffic using edge 137.0.3296.52
+configuration:
+  profile: edge
+  vars:
+    APP_utadb_URL: http://civcez229.nonprod.hclpnp.com/aries-web/Samples/htmlControls/controls.html
+    TYPE_2: Name
+    Name: Name1
+    Street: AddressFieldExists
+    Street_3: AddressField_Does_Not_Exist
+    City: CityName
+    State: StateName
+    Zip: ZipName
+    E_mail: Email
+    CheckIfNameExists: ''
+    CheckIfAddressFieldExists: ''
+    LabelEqualsCity: ''
+steps:
+  - open:
+      note: Open utadb
+      url: http://civcez229.nonprod.hclpnp.com/aries-web/samples/visionofficeproducts/contest.htm
+  - with:
+      note: HTML Controls with CSS
+      steps:
+        - assign:
+            shot: Contest page_qfyj5n.dti.jpeg#122
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Name
+            properties:
+              - exist:
+                  - var: CheckIfNameExists
+        - if:
+            condition: CheckIfNameExists == true
+            steps:
+              - type:
+                  shot: Contest page_qfyj5n.dti.jpeg#122
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Name
+                  value: '${Name}'
+        - assign:
+            shot: Contest page_o4lg2a.dti.jpeg#300
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: AddressField
+            properties:
+              - exist:
+                  - var: CheckIfAddressFieldExists
+        - if:
+            condition: CheckIfAddressFieldExists == true
+            steps:
+              - type:
+                  shot: Contest page_o4lg2a.dti.jpeg#300
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Street
+                  value: '${Street}'
+              - verify:
+                  shot: Contest page_d2tbzw.dti.jpeg#532
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Street
+                  properties:
+                    - content:
+                        - val: AddressFieldExists
+        - if:
+            condition: CheckIfAddressFieldExists == false
+            steps:
+              - type:
+                  shot: Contest page_d2tbzw.dti.jpeg#532
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Street
+                  value: '${Street_3}'
+              - verify:
+                  shot: Contest page_d2tbzw.dti.jpeg#532
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Street
+                  properties:
+                    - content:
+                        - val: AddressField_Does_Not_Exist
+        - assign:
+            shot: Contest page_pmxd4b.dti.jpeg#710
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - name:
+                      - val: City
+            properties:
+              - label:
+                  - var: LabelEqualsCity
+        - type:
+            shot: Contest page_pmxd4b.dti.jpeg#710
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: City
+            value: '${City}'
+        - if:
+            condition: City == 'CityName'
+            steps:
+              - type:
+                  shot: Contest page_pmxd4b.dti.jpeg#710
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: City
+                  value: '${City}'
+        - type:
+            shot: Contest page_ts3kpu.dti.jpeg#888
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State
+            value: '${State}'
+        - type:
+            shot: Contest page_lqb4ad.dti.jpeg#1066
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Zip
+            value: '${Zip}'
+        - type:
+            shot: Contest page_monssw.dti.jpeg#1302
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: E-mail
+            value: '${E_mail}'
+        - select:
+            shot: Contest page_gjyea4.dti.jpeg#1364
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Position
+            value: Management
+        - select:
+            shot: Contest page_lkgf3h.dti.jpeg#1426
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Salary Range
+            value: $25,001 to $50,000
+        - click:
+            shot: Contest page_vlsybf.dti.jpeg#1495
+            object: html.textarea
+            identifiers:
+              - properties:
+                  - label:
+                      - val: |-
+                          Describe what types of office
+                                      supplies you purchase:

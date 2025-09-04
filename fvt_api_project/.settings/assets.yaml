@@ -1,0 +1,19 @@
+name: fvt_api_project
+projectReferences: 
+resources: 
+  - name: Logical
+    resources: 
+      - name: addNumbers.wsc
+        resources: 
+          - name: addition.opr
+            resources: 
+              - name: AdditionAPITest.tsq
+                type: com.ibm.rational.test.rit.testType
+                dependencies: 
+                  - path: /fvt_api_project
+                    type: tsqProject
+              - name: SumAPITest.tsq
+                type: com.ibm.rational.test.rit.testType
+                dependencies: 
+                  - path: /fvt_api_project
+                    type: tsqProject

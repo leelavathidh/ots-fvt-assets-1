@@ -1,0 +1,115 @@
+{
+  "name" : "Jobs",
+  "description" : "",
+  "fields" : [ {
+    "name" : "JOB_ID",
+    "repositoryUrl" : "",
+    "filePath" : "",
+    "generatorValues" : {
+      "name" : "String",
+      "version" : "0.0.1",
+      "categoryId" : "00000",
+      "parentGenerator" : null,
+      "globalProperties" : {
+        "randomDistribution" : "false",
+        "duplicatesAllowed" : "false",
+        "blankPercentage" : "0"
+      },
+      "configurations" : [ {
+        "name" : "Default",
+        "weightage" : 100.0,
+        "properties" : {
+          "minimumCharacters" : 1,
+          "maximumCharacters" : 10,
+          "includeSpecialCharacters" : "false",
+          "includeDigits" : "false"
+        }
+      } ]
+    }
+  }, {
+    "name" : "JOB_TITLE",
+    "repositoryUrl" : "",
+    "filePath" : "",
+    "generatorValues" : {
+      "name" : "String",
+      "version" : "0.0.1",
+      "categoryId" : "00000",
+      "parentGenerator" : null,
+      "globalProperties" : {
+        "randomDistribution" : "false",
+        "duplicatesAllowed" : "true",
+        "blankPercentage" : "0"
+      },
+      "configurations" : [ {
+        "name" : "Default",
+        "weightage" : 100.0,
+        "properties" : {
+          "minimumCharacters" : "10",
+          "maximumCharacters" : 20,
+          "includeSpecialCharacters" : "false",
+          "includeDigits" : "false"
+        }
+      } ]
+    }
+  }, {
+    "name" : "MIN_SALARY",
+    "repositoryUrl" : "",
+    "filePath" : "",
+    "generatorValues" : {
+      "name" : "Number",
+      "version" : "0.0.1",
+      "categoryId" : "00000",
+      "parentGenerator" : null,
+      "globalProperties" : {
+        "randomDistribution" : "false",
+        "duplicatesAllowed" : "true",
+        "blankPercentage" : "0"
+      },
+      "configurations" : [ {
+        "name" : "Default",
+        "weightage" : 100.0,
+        "properties" : {
+          "numbers" : {
+            "by" : "valueRange",
+            "min" : 100,
+            "max" : "1000"
+          },
+          "decimalPlaces" : {
+            "min" : "",
+            "max" : ""
+          }
+        }
+      } ]
+    }
+  }, {
+    "name" : "MAX_SALARY",
+    "repositoryUrl" : "",
+    "filePath" : "",
+    "generatorValues" : {
+      "name" : "Number",
+      "version" : "0.0.1",
+      "categoryId" : "00000",
+      "parentGenerator" : null,
+      "globalProperties" : {
+        "randomDistribution" : "false",
+        "duplicatesAllowed" : "true",
+        "blankPercentage" : "0"
+      },
+      "configurations" : [ {
+        "name" : "Default",
+        "weightage" : 100.0,
+        "properties" : {
+          "numbers" : {
+            "by" : "valueRange",
+            "min" : 100,
+            "max" : "1000"
+          },
+          "decimalPlaces" : {
+            "min" : "",
+            "max" : ""
+          }
+        }
+      } ]
+    }
+  } ]
+}

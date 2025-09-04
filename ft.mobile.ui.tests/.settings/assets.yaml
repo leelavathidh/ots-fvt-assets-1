@@ -1,0 +1,215 @@
+name: ft.mobile.ui.tests
+version: 2
+projectReferences: 
+  - /UITestProjectMac
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /ft.mobile.ui.tests/src
+        type: javaClasspath
+  - name: 8324522_ipa_1fb.ma
+    type: moeb.applicationPackage
+  - name: 8324522_ipa_24d.ma
+    type: moeb.applicationPackage
+  - name: AFTBrowserStackMobile.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: /ft.mobile.ui.tests/Tests/apidemos1.testsuite
+        type: aftsuite
+  - name: AFTBrowserStackWebUI.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: /ft.mobile.ui.tests/Tests/JqueryMobile.testsuite
+        type: aftsuite
+  - name: AFTLambdaTestMobile.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: /ft.mobile.ui.tests/Tests/apidemos1.testsuite
+        type: aftsuite
+  - name: AFTpCloudyMobile.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: /ft.mobile.ui.tests/Tests/apidemos1.testsuite
+        type: aftsuite
+  - name: AFTpCloudyWebUI.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: /ft.mobile.ui.tests/Tests/JqueryMobile.testsuite
+        type: aftsuite
+  - name: 'Compound Tests'
+    resources: 
+      - name: CP_Mobile_WebUI.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	apidemos1
+
+	JqueryMobile
+
+'
+          name: CP_Mobile_WebUI
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EDDF6CEDE60450C6C8E46133663430
+        dependencies: 
+          - path: /ft.mobile.ui.tests/Tests/JqueryMobile.testsuite
+            type: scheduleInvokedTest
+          - path: /ft.mobile.ui.tests/Tests/apidemos1.testsuite
+            type: scheduleInvokedTest
+      - name: CP_Single_Mobile.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	apidemos1
+
+'
+          name: CP_Single_Mobile
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EDDF6CA57ABDA0C6C8E46133663430
+        dependencies: 
+          - path: /ft.mobile.ui.tests/Tests/apidemos1.testsuite
+            type: scheduleInvokedTest
+      - name: CP_Single_WebUI.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	JqueryMobile
+
+'
+          name: CP_Single_WebUI
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EDDF6CC621A870C6C8E46133663430
+        dependencies: 
+          - path: /ft.mobile.ui.tests/Tests/JqueryMobile.testsuite
+            type: scheduleInvokedTest
+      - name: CP_Two_Mobile.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	apidemos1
+
+	apidemos2
+
+'
+          name: CP_Two_Mobile
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EDDF6CDCA646A0C6C8E46133663430
+        dependencies: 
+          - path: /ft.mobile.ui.tests/Tests/apidemos1.testsuite
+            type: scheduleInvokedTest
+          - path: /ft.mobile.ui.tests/Tests/apidemos2.testsuite
+            type: scheduleInvokedTest
+      - name: CP_Two_WebUI.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	JqueryMobile
+
+	JqueryMobile1
+
+'
+          name: CP_Two_WebUI
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EDDF6CE41BC2C0C6C8E46133663430
+        dependencies: 
+          - path: /ft.mobile.ui.tests/Tests/JqueryMobile.testsuite
+            type: scheduleInvokedTest
+          - path: /ft.mobile.ui.tests/Tests/JqueryMobile1.testsuite
+            type: scheduleInvokedTest
+  - name: Tests
+    resources: 
+      - name: JqueryMobile.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDD8681236E7E0D07FB36432363832
+        dependencies: 
+          - path: /ft.mobile.ui.tests/ymobile_com_019.ma
+            type: test#moeb.applicationPackage
+      - name: JqueryMobile1.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDDB4F8E90D876DDBEE36562633237
+        dependencies: 
+          - path: /ft.mobile.ui.tests/ymobile_com_019.ma
+            type: test#moeb.applicationPackage
+      - name: apidemos1.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDD8675E1E2B60D07FB36432363832
+        dependencies: 
+          - path: /ft.mobile.ui.tests/osdebug_apk_a41.ma
+            type: test#moeb.applicationPackage
+      - name: apidemos2.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDDF6CAF376AA0C6C8E46133663430
+        dependencies: 
+          - path: /ft.mobile.ui.tests/osdebug_apk_a41.ma
+            type: test#moeb.applicationPackage
+      - name: iostest_uicat_LambdaTest.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EF4FE165491944D503B63338353737
+        dependencies: 
+          - path: /ft.mobile.ui.tests/e_ios15_ipa_61f.ma
+            type: test#moeb.applicationPackage
+      - name: iostest_uicat_browserStack.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EED0A78E43D7AEC42BB13232316366
+        dependencies: 
+          - path: /ft.mobile.ui.tests/e_ios15_ipa_61f.ma
+            type: test#moeb.applicationPackage
+      - name: iostest_uicat_pCloudy.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDDD05EF33AE70C14DB03331653933
+        dependencies: 
+          - path: /ft.mobile.ui.tests/8324522_ipa_24d.ma
+            type: test#moeb.applicationPackage
+  - name: bug_(1)_apk_c77.ma
+    type: moeb.applicationPackage
+  - name: e_ios15_ipa_61f.ma
+    type: moeb.applicationPackage
+  - name: osdebug_apk_a41.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+  - name: ymobile_com_019.ma
+    type: moeb.applicationPackage

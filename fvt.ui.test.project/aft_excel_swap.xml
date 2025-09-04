@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="N4A0FD20053B11EFBD47E262B180A485" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/fvt.ui.test.project/Tests/webui_dataset_excel_xls_swap.testsuite"/>
+            <test path="/fvt.ui.test.project/Compound Tests/CmpTest_WebUI_Excel_swap.testsuite"/>
+        </tests>
+        <browsers>
+            <browser name="chrome" headless="false" private="false"/>
+        </browsers>
+    </group>
+</inits>

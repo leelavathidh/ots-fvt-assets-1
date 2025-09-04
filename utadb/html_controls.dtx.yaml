@@ -1,0 +1,284 @@
+note: Generated from recorded traffic
+configuration:
+  vars:
+    TEST_ENDPOINT: http://civcez229.nonprod.hclpnp.com
+    var1: initvalue1
+steps:
+  - open:
+      note: Open http://civcez229.nonprod.hclpnp.com/aries-web/Samples/htmlControls/controls.html
+      url: ${TEST_ENDPOINT}/aries-web/Samples/htmlControls/controls.html
+  - with:
+      note: HTML Controls with CSS
+      steps:
+        - click:
+            shot: shot/rxkukj.dti.jpeg#39
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+                  - domainName:
+                      - val: html
+                locators:
+                  - position: '1'
+            stepTimeout: 70s
+        - type:
+            shot: shot/n4y6ai.dti.jpeg#75
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+                  - domainName:
+                      - val: html
+                locators:
+                  - position: '1'
+            value: Fname
+        - assign:
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+                  - domainName:
+                      - val: html
+                locators:
+                  - position: '1'
+            properties:
+              - content:
+                  - var:
+                      name: var1
+                      regex: .*
+        - log: My variable is ${var1}
+        - click:
+            shot: shot/gsfjo4.dti.jpeg#149
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+                  - domainName:
+                      - val: html
+                locators:
+                  - position: '2'
+        - type:
+            shot: shot/zmscnc.dti.jpeg#185
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+                  - domainName:
+                      - val: html
+                locators:
+                  - position: '2'
+            value: Sname
+        - press: enter
+        - click:
+            shot: shot/dhrnzd.dti.jpeg#260
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Password:'
+        - type:
+            shot: shot/7af2pr.dti.jpeg#296
+            object: html.inputpassword
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Password:'
+            value: okok
+        - click:
+            shot: shot/gsfjo4.dti.jpeg#149
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+                  - domainName:
+                      - val: html
+                locators:
+                  - position: '2'
+            use: double_click
+        - click:
+            shot: shot/gsfjo4.dti.jpeg#149
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+                  - domainName:
+                      - val: html
+                locators:
+                  - position: '2'
+            use: right_click
+        - click:
+            shot: shot/zetogu.dti.jpeg#370
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Email:'
+        - type:
+            shot: shot/7qcswe.dti.jpeg#406
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Email:'
+            value: gee@gmail.com
+        - verify:
+            object: html.inputemail
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Email:'
+            properties:
+              - content:
+                  - val: gee@gmail.com
+        - click:
+            shot: shot/r4goki.dti.jpeg#481
+            object: html.textarea
+            identifiers:
+              - properties:
+                  - placeholder:
+                      - val: Write your message
+        - type:
+            shot: shot/kjcvxi.dti.jpeg#553
+            object: html.textarea
+            identifiers:
+              - properties:
+                  - placeholder:
+                      - val: Write your message
+            value: check sample
+        - select:
+            shot: shot/thruom.dti.jpeg#591
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Country:'
+            value: India
+        - type:
+            shot: shot/wqbior.dti.jpeg#629
+            object: html.inputtextfield
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Age
+            value: '3'
+        - type:
+            shot: shot/2ix3wb.dti.jpeg#665
+            object: html.inputtextfield
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Age
+            value: '30'
+        - verify:
+            object: html.inputradio
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //html/body/input[2]
+            properties:
+              - checked:
+                  - val: 'false'
+              - content:
+                  - val: {}
+              - enabled:
+                  - val: 'true'
+              - exist:
+                  - val: 'true'
+              - label:
+                  - val: Female
+              - name:
+                  - val: gender
+              - tagName:
+                  - val: input
+              - type:
+                  - val: radio
+              - value:
+                  - val: female
+              - xpath:
+                  - val: //html/body/input[2]
+        - click:
+            shot: shot/xaxcvs.dti.jpeg#741
+            object: html.inputradio
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Female
+        - click:
+            shot: shot/n3ihzv.dti.jpeg#778
+            object: html.inputcheckbox
+            identifiers:
+              - properties:
+                  - label:
+                      - val: "\n     Subscribe to newsletter\n  "
+        - click:
+            shot: shot/jdy2mb.dti.jpeg#816
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Submit
+        - click:
+            object: html.div
+            identifiers:
+              - properties:
+                  - id:
+                      - val: draggable
+            use: drag
+            to:
+              object: html.div
+              identifiers:
+                - properties:
+                    - xpath:
+                        - val: //div[@id='droppable']
+        - run: javascript_alerts.dtx.yaml
+        - click:
+            enabled: 'false'
+            shot: shot/jcxq4h.dti.jpeg#84
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: New Tab
+        - open:
+            enabled: 'false'
+            note: New Page
+            meta:
+              browserName: firefox
+              browserVersion: 131.0.3
+              platformName: windows
+            url: ${TEST_ENDPOINT}/aries-web/Samples/htmlControls/page1.html'
+            attach: 'true'
+            context: window2
+  - with:
+      enabled: 'false'
+      note: New Page
+      context: window2
+      steps:
+        - click:
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+        - type:
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Name:'
+            value: tab1
+        - click:
+            object: html.html
+            identifiers:
+              - properties:
+                  - content:
+                      - val: |-
+                          New Page
+                          Name:

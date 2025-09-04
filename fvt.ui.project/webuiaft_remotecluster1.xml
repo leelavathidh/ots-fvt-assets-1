@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="A1EE94117067F4C0FC48B43337653863" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/fvt.ui.project/Compound Tests/CompoundTest_WebUI_NestedIframes.testsuite"></test>
+        </tests>
+        <browsers>
+            <browser name="chrome"/>
+        </browsers>
+    </group>
+    <group>
+        <tests>
+            <test path="/fvt.ui.project/Compound Tests/CompoundTest_WebUI_HTML5_Dataset.testsuite"></test>
+        </tests>
+        <browsers>
+            <browser name="firefox"/>
+        </browsers>
+    </group>
+    </inits>

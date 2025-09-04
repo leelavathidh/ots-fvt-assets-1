@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="A1EF4FE1AFF17E90D503B63338353737" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/ft.mobile.ui.tests/Tests/apidemos1.testsuite"></test>
+        </tests>
+        <devices>
+            <device id="LambdaTest : Galaxy S22 Ultra 5G"></device>
+            <device id="LambdaTest : Galaxy S24"></device>
+        </devices>
+    </group>
+</inits>

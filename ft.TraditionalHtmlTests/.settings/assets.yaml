@@ -1,0 +1,203 @@
+name: ft.TraditionalHtmlTests
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /ft.TraditionalHtmlTests
+        type: javaClasspath
+  - name: .project
+  - name: FT_HTMLTest_Shared_Dataset.java
+  - name: FT_HTMLTest_Shared_Dataset.testsuite
+    type: com.ibm.rational.test.rtw.rft.navigator.rftScripts
+    version: 11.0.5.0
+    properties: 
+      domain: HTML
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.rtw.rft'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F04B99585A2E70C6ABB56665623534
+    dependencies: 
+      - path: /ft.TraditionalHtmlTests/.classpath
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/.project
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/FT_HTMLTest_Shared_Dataset.java
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/FT_HTMLTest_Shared_Dataset.testsuite
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/Shared_Dataset.csv
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/DatastoreDefinition.rftdsd
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/FT_HTMLTest_Shared_Dataset.rftdef
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/FT_HTMLTest_Shared_Dataset.rftxmap
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/FT_HTMLTest_Shared_DatasetHelper.java
+        type: FtScriptDependants
+  - name: Frame_HTML_PlaybackConvergence.java
+  - name: Frame_HTML_PlaybackConvergence.testsuite
+    type: com.ibm.rational.test.rtw.rft.navigator.rftScripts
+    version: 11.0.5.0
+    properties: 
+      domain: HTML
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.rtw.rft'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F04B99584E4790C6ABB56665623534
+    dependencies: 
+      - path: /ft.TraditionalHtmlTests/.classpath
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/.project
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/Frame_HTML_PlaybackConvergence.java
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/Frame_HTML_PlaybackConvergence.testsuite
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/DatastoreDefinition.rftdsd
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.Age_selected.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.Age_selected_2.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.Event_selected.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.Gender_selected.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.HREFIMGTestPage_standard.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.IDTestPage_standard.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.Price_selected.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.Scrollbox_text.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.Scrollbox_text_2.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence._1linebox1_text.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence._1linebox1_text_2.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence._1linebox_text.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.nameAndAlt10_state.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.nametest6_state.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.rftdef
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.rftxmap
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.vehicleBike_state.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergence.vehicleBike_state_2.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/Frame_HTML_PlaybackConvergenceHelper.java
+        type: FtScriptDependants
+  - name: Shared_Dataset.csv
+    type: com.ibm.rational.test.lt.datapool
+    dependencies: 
+      - path: /ft.TraditionalHtmlTests/Shared_Dataset.csv.metadata
+        type: datasetMetadata
+  - name: Shared_Dataset.csv.metadata
+  - name: iFrame_HTML_PlaybackConvergence.java
+  - name: iFrame_HTML_PlaybackConvergence.testsuite
+    type: com.ibm.rational.test.rtw.rft.navigator.rftScripts
+    version: 11.0.5.0
+    properties: 
+      domain: HTML
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.rtw.rft'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F04B995863A450C6ABB56665623534
+    dependencies: 
+      - path: /ft.TraditionalHtmlTests/.classpath
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/.project
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/iFrame_HTML_PlaybackConvergence.java
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/iFrame_HTML_PlaybackConvergence.testsuite
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/DatastoreDefinition.rftdsd
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.Age_selected.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.Age_selected_2.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.Event_selected.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.Gender_selected.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.HREFIMGTestPage_standard.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.IDTestPage_standard.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.Price_selected.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.Scrollbox_text.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.Scrollbox_text_2.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence._1linebox1_text.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence._1linebox1_text_2.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence._1linebox_text.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.nameAndAlt10_state.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.nametest6_state.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.rftdef
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.rftxmap
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.vehicleBike_state.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergence.vehicleBike_state_2.base.rftvp
+        type: FtScriptDependants
+      - path: /ft.TraditionalHtmlTests/resources/iFrame_HTML_PlaybackConvergenceHelper.java
+        type: FtScriptDependants
+  - name: resources
+    resources: 
+      - name: DatastoreDefinition.rftdsd
+      - name: FT_HTMLTest_Shared_Dataset.rftdef
+      - name: FT_HTMLTest_Shared_Dataset.rftxmap
+      - name: FT_HTMLTest_Shared_DatasetHelper.java
+      - name: Frame_HTML_PlaybackConvergence.Age_selected.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.Age_selected_2.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.Event_selected.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.Gender_selected.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.HREFIMGTestPage_standard.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.IDTestPage_standard.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.Price_selected.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.Scrollbox_text.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.Scrollbox_text_2.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence._1linebox1_text.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence._1linebox1_text_2.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence._1linebox_text.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.nameAndAlt10_state.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.nametest6_state.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.rftdef
+      - name: Frame_HTML_PlaybackConvergence.rftxmap
+      - name: Frame_HTML_PlaybackConvergence.vehicleBike_state.base.rftvp
+      - name: Frame_HTML_PlaybackConvergence.vehicleBike_state_2.base.rftvp
+      - name: Frame_HTML_PlaybackConvergenceHelper.java
+      - name: iFrame_HTML_PlaybackConvergence.Age_selected.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.Age_selected_2.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.Event_selected.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.Gender_selected.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.HREFIMGTestPage_standard.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.IDTestPage_standard.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.Price_selected.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.Scrollbox_text.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.Scrollbox_text_2.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence._1linebox1_text.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence._1linebox1_text_2.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence._1linebox_text.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.nameAndAlt10_state.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.nametest6_state.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.rftdef
+      - name: iFrame_HTML_PlaybackConvergence.rftxmap
+      - name: iFrame_HTML_PlaybackConvergence.vehicleBike_state.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergence.vehicleBike_state_2.base.rftvp
+      - name: iFrame_HTML_PlaybackConvergenceHelper.java

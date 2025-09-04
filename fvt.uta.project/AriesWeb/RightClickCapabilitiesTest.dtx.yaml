@@ -1,0 +1,42 @@
+note: Generated from recorded traffic using chrome 136.0.7103.114
+configuration:
+  profile: chrome
+  vars:
+    APP_AriesWeb_URL: http://tp-fvtapps1.nonprod.hclpnp.com/aries-web/samples/visionofficeproducts/contest.htm
+    Street: street1
+steps:
+  - open:
+      note: Open AriesWeb
+      url: '${APP_AriesWeb_URL}'
+  - with:
+      note: Contest page
+      steps:
+        - click:
+            shot: Contest page_il545w.dti.jpeg#68
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+        - type:
+            shot: Contest page_ryr3ak.dti.jpeg#126
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+            value: '${Street}'
+        - click:
+            shot: Contest page_3wcejz.dti.jpeg#270
+            object: html.inputradio
+            identifiers:
+              - properties:
+                  - value:
+                      - val: no
+        - click:
+            shot: Contest page_lobgfr.dti.jpeg#339
+            object: html.inputreset
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Reset

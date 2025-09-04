@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="A1EE5A186C8EB1F0D2BFB03366626161" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/fvt.ui.project/Tests/webui_basic_test.testsuite"></test>
+        </tests>
+        <browsers>
+            <browser name="Chrome"></browser>
+            <browser name="Firefox"></browser>
+            <browser name="Edge"></browser>
+        </browsers>
+        <locations>
+        	<location host="perf-docker-agent"></location>
+        </locations>
+    </group>
+</inits>

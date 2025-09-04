@@ -1,0 +1,39 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open http://civcez229.nonprod.hclpnp.com/aries-web/index.html
+      meta:
+        browserName: chrome
+        browserVersion: 130.0.6723.93
+        platformName: windows
+      url: http://civcez229.nonprod.hclpnp.com/aries-web/index.html
+  - with:
+      note: Aries-web Home Page
+      steps:
+        - click:
+            shot: shot/xm25bs.dti.jpeg#223
+            object: html.a
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Sample HTML Sites
+  - with:
+      note: Aries-web Sample Sites Home Page
+      steps:
+        - click:
+            shot: shot/ba2ztp.dti.jpeg#73
+            object: html.span
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Vision Office Products site
+  - with:
+      note: Vision Office Products Home Page
+      steps:
+        - click:
+            shot: shot/kzm677.dti.jpeg#33
+            object: html.a
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Click here to win a FREE computer chair!

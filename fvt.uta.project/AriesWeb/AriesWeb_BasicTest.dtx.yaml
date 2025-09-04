@@ -1,0 +1,176 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open AriesWeb
+      meta:
+        browserName: firefox
+        browserVersion: 132.0.2
+        platformName: windows
+      url: '${APP_ARIESWEB_URL}'
+  - with:
+      note: Contest page
+      steps:
+        - click:
+            shot: shot/rh7miz.dti.jpeg#68
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+        - assign:
+            shot: shot/5l2gi7.dti.jpeg#126
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //html/body/form/table/tbody/tr[2]/td[2]/input
+            properties:
+              - label:
+                  - var: Var_from_property
+        - type:
+            shot: shot/5l2gi7.dti.jpeg#126
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+            value: street1
+        - verify:
+            shot: shot/5gd6q5.dti.jpeg#246
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //html/body/form/table/tbody/tr[2]/td[2]/input
+            properties:
+              - content:
+                  - val: street1
+        - click:
+            shot: shot/5gd6q5.dti.jpeg#246
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: City
+        - verify:
+            shot: shot/rwp4o5.dti.jpeg#304
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //html/body/form/table/tbody/tr[3]/td[2]/input
+            properties:
+              - name:
+                  - val: City
+        - type:
+            shot: shot/rwp4o5.dti.jpeg#304
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: City
+            value: city1
+        - click:
+            shot: shot/6mywth.dti.jpeg#424
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State
+        - verify:
+            shot: shot/6svffl.dti.jpeg#482
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //html/body/form/table/tbody/tr[4]/td[2]/input
+            properties:
+              - type:
+                  - val: text
+        - type:
+            shot: shot/6svffl.dti.jpeg#482
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State
+            value: state1
+        - click:
+            shot: shot/nfhh6j.dti.jpeg#602
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Zip
+        - type:
+            shot: shot/ogs7mn.dti.jpeg#718
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Zip
+            value: '678678'
+        - select:
+            shot: shot/rcsv2k.dti.jpeg#784
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Position
+            value: Professional Staff
+        - select:
+            shot: shot/7koo44.dti.jpeg#846
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Salary Range
+            value: Under $25,000
+        - verify:
+            shot: shot/iaeile.dti.jpeg#908
+            object: html.inputradio
+            identifiers:
+              - properties:
+                  - xpath:
+                      - val: //html/body/form/table/tbody/tr[9]/td/pre/font/input[2]
+            properties:
+              - value:
+                  - val: no
+        - click:
+            shot: shot/iaeile.dti.jpeg#908
+            object: html.inputradio
+            identifiers:
+              - properties:
+                  - value:
+                      - val: no
+        - click:
+            shot: shot/tv3vma.dti.jpeg#973
+            object: html.textarea
+            identifiers:
+              - properties:
+                  - label:
+                      - val: |-
+                          Describe what types of office
+                                      supplies you purchase:
+        - type:
+            shot: shot/dmyfjd.dti.jpeg#1031
+            object: html.textarea
+            identifiers:
+              - properties:
+                  - label:
+                      - val: |-
+                          Describe what types of office
+                                      supplies you purchase:
+            value: description
+        - click:
+            shot: shot/awm7la.dti.jpeg#1151
+            object: html.inputreset
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Reset
+vars:
+  APP_ARIESWEB_URL:
+    expr: http://tp-fvtapps1.nonprod.hclpnp.com/aries-web/samples/visionofficeproducts/contest.htm
+    modifier: in
+  Var_from_property: ''

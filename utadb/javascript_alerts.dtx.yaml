@@ -1,0 +1,39 @@
+note: Generated from recorded traffic
+configuration:
+  vars:
+    APP_utadb_URL: http://civcez229.nonprod.hclpnp.com/aries-web/Samples/javascriptsamples/javascript_popupboxes.html
+steps:
+  - open:
+      note: Open utadb
+      url: '${APP_utadb_URL}'
+  - with:
+      note: ''
+      steps:
+        - click:
+            shot: wkqmm6.dti.jpeg#12
+            object: html.inputbutton
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Show alert box
+        - click:
+            object: window.ok
+        - click:
+            shot: kgnup4.dti.jpeg#24
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Show confirm box
+        - click:
+            object: window.ok
+        - click:
+            shot: icjl2j.dti.jpeg#38
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Show prompt box
+        - type:
+            object: window.popup
+            value: Harry Potter

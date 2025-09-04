@@ -1,0 +1,5 @@
+StickyFolders///Compound\ Tests=com.ibm.rational.test.lt.scenario
+StickyFolders///Datasets=com.ibm.rational.test.lt.datapool
+StickyFolders///Results=com.ibm.rational.test.lt.stats.session
+StickyFolders///Tests=com.ibm.rational.test.lt.test
+eclipse.preferences.version=1

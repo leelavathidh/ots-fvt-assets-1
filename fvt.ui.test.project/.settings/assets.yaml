@@ -1,0 +1,80 @@
+name: fvt.ui.test.project
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /fvt.ui.test.project/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+      - name: CmpTest_WebUI_Excel_swap.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	webui_dataset_excel_xls_swap
+
+'
+          name: CmpTest_WebUI_Excel_swap
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EF653A5C600580F8E6E13737353137
+        dependencies: 
+          - path: /fvt.ui.test.project/Tests/webui_dataset_excel_xls_swap.testsuite
+            type: scheduleInvokedTest
+  - name: Datasets
+    resources: 
+      - name: dataset_for_excel_swap.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /fvt.ui.test.project/Datasets/dataset_for_excel_swap.csv.metadata
+            type: datasetMetadata
+      - name: dataset_for_excel_swap.csv.metadata
+      - name: dataset_for_swap.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /fvt.ui.test.project/Datasets/dataset_for_swap.csv.metadata
+            type: datasetMetadata
+      - name: dataset_for_swap.csv.metadata
+  - name: Tests
+    resources: 
+      - name: webui_dataset_excel_xls_swap.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EF6528A4E3E33BF87AB26532636364
+        dependencies: 
+          - path: /fvt.ui.test.project/Datasets/dataset_for_excel_swap.csv
+            type: testDatapool
+          - path: /fvt.ui.test.project/b_Home_Page_139.ma
+            type: test#moeb.applicationPackage
+      - name: webui_dataset_excel_xlsx_swap.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EF65338299F5E6F268E23561636634
+        dependencies: 
+          - path: /fvt.ui.test.project/Datasets/dataset_for_excel_swap.csv
+            type: testDatapool
+          - path: /fvt.ui.test.project/b_Home_Page_139.ma
+            type: test#moeb.applicationPackage
+  - name: _hclpnp_com_6e9.ma
+    type: moeb.applicationPackage
+  - name: aft_excel_swap.xml
+    type: com.ibm.rational.test.ft.aftsuite
+    version: 11.0.5.0
+    dependencies: 
+      - path: '/fvt.ui.test.project/Compound Tests/CmpTest_WebUI_Excel_swap.testsuite'
+        type: aftsuite
+      - path: /fvt.ui.test.project/Tests/webui_dataset_excel_xls_swap.testsuite
+        type: aftsuite
+  - name: b_Home_Page_139.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 

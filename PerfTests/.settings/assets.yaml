@@ -1,0 +1,56 @@
+name: PerfTests
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /PerfTests/src
+        type: javaClasspath
+  - name: HCLHome.recdata
+  - name: HCLHome.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /PerfTests/HCLHome.recdata
+        type: recsessionRecdata
+  - name: MyPerfSchedule.testsuite
+    type: com.ibm.rational.test.lt.schedule
+    version: 11.0.5.0
+    properties: 
+      description: 'Stages:
+
+	users=1; duration=1 minutes
+
+	users=3; duration=1 minutes
+
+	users=5; duration=1 minutes
+
+User Group 1: Group Size 100.0 percent
+
+	Test(s): perfTest1
+
+'
+      name: MyPerfSchedule
+      type: com.ibm.rational.test.common.schedule.Schedule
+      uid: A1EDE9C38DD25620F0FAB83139313531
+    dependencies: 
+      - path: /PerfTests/perfTest1.testsuite
+        type: scheduleInvokedTest
+  - name: perfTest1.recdata
+  - name: perfTest1.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /PerfTests/perfTest1.recdata
+        type: recsessionRecdata
+  - name: perfTest1.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.5.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EDE9CE8078D250EF84B23531653563
+    dependencies: 
+      - path: /PerfTests/perfTest1.recsession
+        type: testRecsession
+  - name: src
+    resources: 

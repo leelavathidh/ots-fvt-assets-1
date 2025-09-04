@@ -1,0 +1,147 @@
+name: fvt.pt.project
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /fvt.pt.project/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+      - name: CompTest_JMeter.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+'
+          name: CompTest_JMeter
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EFFA8614534D60C717E53862333437
+        dependencies: 
+          - path: /fvt.pt.project/JMeter_Tests/HttpBin_JMeter_Test.jmx
+            type: scheduleInvokedTest
+      - name: PT_CompTest1.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 11.0.5.0
+        properties: 
+          description: 'Test(s): 
+
+	PT_HttpTest1
+
+'
+          name: PT_CompTest1
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EE9A827A2F99F0C320B96135636531
+        dependencies: 
+          - path: /fvt.pt.project/Tests/PT_HttpTest1.testsuite
+            type: scheduleInvokedTest
+  - name: Datasets
+    resources: 
+      - name: DS1.csv
+        type: com.ibm.rational.test.lt.datapool
+        dependencies: 
+          - path: /fvt.pt.project/Datasets/DS1.csv.metadata
+            type: datasetMetadata
+      - name: DS1.csv.metadata
+  - name: JMeter_Tests
+    resources: 
+      - name: HttpBin_JMeter_Test.jmx
+        type: com.ibm.rational.test.jmeter
+  - name: Locations
+    resources: 
+      - name: 10.115.83.43.location
+        type: com.ibm.rational.test.lt.location
+      - name: LinuxLocalHost-127.0.0.1.location
+        type: com.ibm.rational.test.lt.location
+      - name: WindowsLocalHost-127.0.0.1.location
+        type: com.ibm.rational.test.lt.location
+  - name: Schedules
+    resources: 
+      - name: HTTP_Sche_Agent.testsuite
+        type: com.ibm.rational.test.lt.schedule
+        version: 11.0.5.0
+        properties: 
+          description: 'Stages:
+
+	users=10; duration=Run Until Finished
+
+User Group 1: Group Size 100.0 percent
+
+	Agent(s): 10.115.83.43
+
+	Test(s): PT_HttpTest1
+
+'
+          name: HTTP_Sche_Agent
+          type: com.ibm.rational.test.common.schedule.Schedule
+          uid: A1EF289F2005171BE6D5B33433616361
+        dependencies: 
+          - path: /fvt.pt.project/Locations/10.115.83.43.location
+            type: scheduleLocation
+          - path: /fvt.pt.project/Tests/PT_HttpTest1.testsuite
+            type: scheduleInvokedTest
+      - name: HTTP_Sche_NoAgent.testsuite
+        type: com.ibm.rational.test.lt.schedule
+        version: 11.0.5.0
+        properties: 
+          description: 'Stages:
+
+	users=10; duration=Run Until Finished
+
+User Group 1: Group Size 100.0 percent
+
+	Test(s): PT_HttpTest1
+
+'
+          name: HTTP_Sche_NoAgent
+          type: com.ibm.rational.test.common.schedule.Schedule
+          uid: A1EF289F2009D1FEE6D5B33433616361
+        dependencies: 
+          - path: /fvt.pt.project/Tests/PT_HttpTest1.testsuite
+            type: scheduleInvokedTest
+      - name: RateSchedule_HTTP.testsuite
+        type: com.ibm.rational.test.lt.rate.schedule
+        version: 11.0.5.0
+        properties: 
+          description: 'Stages:
+
+	duration(s)=2 minutes
+
+Rate Runner Group 1
+
+	Rate Profiles Stage(s): 1/second
+
+	Test(s): PT_HttpTest1
+
+'
+          name: RateSchedule_HTTP
+          type: com.ibm.rational.test.common.schedule.RateSchedule
+          uid: A1F000772B5F27D0ED13B76261663139
+        dependencies: 
+          - path: /fvt.pt.project/Locations/LinuxLocalHost-127.0.0.1.location
+            type: scheduleLocation
+          - path: /fvt.pt.project/Tests/PT_HttpTest1.testsuite
+            type: scheduleInvokedTest
+  - name: Tests
+    resources: 
+      - name: PT_HttpTest1.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 11.0.5.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.http'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EE9A82659F51B0C320B96135636531
+        dependencies: 
+          - path: /fvt.pt.project/.classpath
+            type: testJavaClasspath
+          - path: /fvt.pt.project/Datasets/DS1.csv
+            type: testDatapool
+          - path: /fvt.pt.project/src/customcode/Class.java
+            type: testCustomCode
+  - name: src
+    resources: 
+      - name: customcode
+        resources: 
+          - name: Class.java

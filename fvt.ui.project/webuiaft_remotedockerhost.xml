@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="A1EE941107DD69D0FC48B43337653863" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/fvt.ui.project/Tests/webui_NestedIframes.testsuite"></test>
+        </tests>
+        <browsers>
+            <browser name="chrome"></browser>
+            <browser name="firefox"></browser>
+            
+        </browsers>
+        <locations>
+            <location host="localhost"></location>
+        </locations>
+    </group>
+    <group>
+        <tests>
+            <test path="/fvt.ui.project/Tests/webui_JavaScript_Popups.testsuite"></test>
+        </tests>
+        <browsers>
+            <browser name="edge"></browser>
+            
+        </browsers>
+        <locations>
+            <location host="localhost"></location>
+        </locations>
+    </group>
+</inits>

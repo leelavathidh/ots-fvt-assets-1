@@ -1,0 +1,4 @@
+Name,address,City,State,Zip,email,buyerDescription
+java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,[ENUMERATION[Please select from below|Professional Staff|Management|Senior Management|President/CEO|Other]],"[ENUMERATION[Please select from below|Under $25,000|$25,001 to $50,000|$50,001 to $75,000|$75,001 to $100,000|Over $100,000]]",java.lang.String
+Sravan_Sh,India_Sh,BLR_Sh,KN_Sh,560045,shared@test.com,buy_sh
+Sravan_Sh1,India_Sh1,BLR_Sh1,KN_Sh1,560046,shared1@test.com,buy_sh1

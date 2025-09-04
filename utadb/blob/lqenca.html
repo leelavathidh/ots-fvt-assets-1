@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Controls with CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>HTML Controls</h1>
+
+<div class="name-group name-row">
+  <label for="name">Name:</label>
+  <input type="text" placeholder="name">
+  
+  <label for="name">Name:</label>
+  <input type="text" placeholder="name">
+</div>
+<div class="login-group name-row">
+  <label for="password">Password:</label>
+  <input type="password" id="password" placeholder="Enter your password">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" placeholder="Enter your email">
+  
+</div>
+  <label for="message">Message:</label>
+  <textarea id="message" placeholder="Write your message"></textarea>
+
+<div class="login-group name-row">
+  <label for="country">Country:</label>
+  <select id="country">
+    <option value="">Select Country</option>
+    <option value="india">India</option>
+    <option value="usa">USA</option>
+    <option value="canada">Canada</option>
+  </select>
+  
+  <label for="age">Enter your age:</label>
+<input type="number" id="age" name="age" min="18" max="100" placeholder="Age">
+</div>
+
+  <label>Gender:</label>
+  <input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female"> Female
+
+  <label for="subscribe">
+    <input type="checkbox" id="subscribe"> Subscribe to newsletter
+  </label>
+
+  <button>Submit</button>
+
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday">
+
+  <label for="color">Pick a Color:</label>
+  <input type="color" id="color" value="#ff0000">
+
+  <label for="search">Search:</label>
+  <input type="search" id="search" placeholder="Enter keywords">
+
+  <label for="volume">Volume:</label>
+  <input type="range" id="volume" min="0" max="100" value="50">
+  
+  <p>Choose multiple colors (hold Ctrl/Cmd for multiple selection):</p>
+<select id="multiColor" name="multiColor" multiple>
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+  <option value="yellow">Yellow</option>
+  <option value="black">Black</option>
+</select>
+<br>
+  
+  
+</body>
+</html>

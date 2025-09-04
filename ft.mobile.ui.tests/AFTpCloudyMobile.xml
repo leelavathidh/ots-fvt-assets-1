@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="A1EED235BF958190C42BB13232316366" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/ft.mobile.ui.tests/Tests/apidemos1.testsuite"></test>
+        </tests>
+        <devices>
+            <device id="pCloudy : Samsung_GalaxyS215G_Android_14.0.0_5ba8b" />
+			<device id="pCloudy : Samsung_GalaxyS22Ultra_Android_14.0.0_8f902" />
+        </devices>
+    </group>
+</inits>

@@ -1,0 +1,5 @@
+configuration:
+  concurrent: '5'
+tests:
+  - uta_dataset_test.dtx.yaml
+  - javascript_alerts.dtx.yaml

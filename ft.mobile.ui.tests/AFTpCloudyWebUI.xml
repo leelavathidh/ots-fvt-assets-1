@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="A1EED235A50A0120C42BB13232316366" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/ft.mobile.ui.tests/Tests/JqueryMobile.testsuite"></test>
+        </tests>
+        <browsers>
+            <browser name="Chrome" id="pCloudy : Samsung_GalaxyS22Ultra_Android_14.0.0_8f902"></browser>
+            <browser name="Safari" id="pCloudy : Apple_iPhone11Pro_Ios_15.2.0_45645"></browser>
+        </browsers>
+    </group>
+</inits>

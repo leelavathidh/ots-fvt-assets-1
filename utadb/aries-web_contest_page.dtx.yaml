@@ -1,0 +1,90 @@
+note: Added Manually
+steps:
+  - open:
+      note: Open http://civcez229.nonprod.hclpnp.com/aries-web/samples/visionofficeproducts/contest.htm
+      meta:
+        browserName: chrome
+        browserVersion: 130.0.6723.93
+        platformName: windows
+      url: http://civcez229.nonprod.hclpnp.com/aries-web/samples/visionofficeproducts/contest.htm
+  - with:
+      note: Contest page
+      steps:
+        - click:
+            shot: shot/ceemz4.dti.jpeg#64
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Name
+        - type:
+            shot: shot/3mp6te.dti.jpeg#122
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Name
+            value: UserName
+        - type:
+            shot: shot/n22tpv.dti.jpeg#184
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+            value: Street
+        - type:
+            shot: shot/y6crvk.dti.jpeg#246
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: City
+            value: City
+        - type:
+            shot: shot/3u7sn2.dti.jpeg#366
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State
+            value: State
+        - select:
+            shot: shot/pjy4ec.dti.jpeg#436
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Position
+            value: Management
+        - select:
+            shot: shot/bdoylh.dti.jpeg#498
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Salary Range
+            value: $75,001 to $100,000
+        - click:
+            shot: shot/kqli75.dti.jpeg#560
+            object: html.inputradio
+            identifiers:
+              - properties:
+                  - value:
+                      - val: no
+        - click:
+            shot: shot/m6g3os.dti.jpeg#625
+            object: html.textarea
+            identifiers:
+              - properties:
+                  - label:
+                      - val: |-
+                          Describe what types of office
+                                      supplies you purchase:
+        - click:
+            shot: shot/iqbwvo.dti.jpeg#686
+            object: html.inputsubmit
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Yes, I want to register to win the computer chair

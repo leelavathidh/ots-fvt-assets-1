@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<inits id="N2D6E3E008FC11EDAE07D38ACD9588FD" type="com.ibm.rational.test.ft.aftsuite">
+    <group>
+        <tests>
+            <test path="/ft.mobile.ui.tests/Tests/JqueryMobile.testsuite"/>
+        </tests>
+          <browsers>
+            <browser name="Chrome" id="BrowserStack : Samsung Galaxy S22"/>
+        </browsers>
+       
+    </group>
+</inits>

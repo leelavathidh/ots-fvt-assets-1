@@ -1,0 +1,3 @@
+tests:
+  - RunTestChild.dtx.yaml
+  - AriesWeb_BasicTest.dtx.yaml

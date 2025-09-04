@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editableResource createdTimestamp="1742376879294"
+    createdUser="onetestfvt" id="-73e43b10:195adbde9d8:-7e24"
+    type="environment_resource" updatedTimestamp="1742376879294"
+    updatedUser="onetestfvt" version="1.0">
+    <loggingConfiguration debug="false" resultWriterLoggingLevel="FULL" writeStubEventsToDB="false"/>
+    <resourceConfig isOverridingSecretsNamespace="false" overridingSecretsNamespace="">
+        <environmentVariable evdescription="" key="Addition" value=""/>
+        <environmentVariable evdescription="" key="Num1" value=""/>
+        <environmentVariable evdescription="" key="Num2" value=""/>
+        <evbindings>
+            <evbinding
+                evLogicalItemId="642ffe99:192c9006b9c:-7e0d:1731931949:408339756" evPhysicalItemId="642ffe99:192c9006b9c:-7e0d:-1600560687:1544155186"/>
+        </evbindings>
+    </resourceConfig>
+</editableResource>

@@ -1,0 +1,155 @@
+note: Generated from recorded traffic using edge 136.0.3240.64
+configuration:
+  profile: edge
+  vars:
+    APP_VisionForm_URL: http://civcez229.nonprod.hclpnp.com/aries-web/samples/visionofficeproducts/contest.htm
+    Street: hello
+    City: city
+    State: state
+    Zip: zip
+    AssignCityLabel: ''
+    CheckIfExistsPass: ''
+    CheckIfExistsFail: ''
+steps:
+  - open:
+      note: Open VisionForm
+      url: '${APP_VisionForm_URL}'
+  - with:
+      note: Contest page
+      steps:
+        - click:
+            shot: Contest page_m6cqkh.dti.jpeg#68
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+        - type:
+            shot: Contest page_s6k3xg.dti.jpeg#126
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Street
+            value: '${Street}'
+        - assign:
+            shot: Contest page_gosjr7.dti.jpeg#246
+            object: html.td
+            identifiers:
+              - properties:
+                  - content:
+                      - val: City
+            properties:
+              - content:
+                  - var: AssignCityLabel
+        - if:
+            condition: AssignCityLabel == 'City'
+            steps:
+              - click:
+                  shot: Contest page_gosjr7.dti.jpeg#246
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: City
+              - type:
+                  shot: Contest page_eitej3.dti.jpeg#304
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: City
+                  value: '${City}'
+        - if:
+            condition: AssignCityLabel != 'City'
+            steps:
+              - click:
+                  shot: Contest page_3gtlmu.dti.jpeg#424
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: State
+              - type:
+                  shot: Contest page_v62wx2.dti.jpeg#482
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: State
+                  value: '${State}'
+        - assign:
+            shot: Contest page_3qwawy.dti.jpeg#602
+            object: html.inputreset
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Reset
+            properties:
+              - exist:
+                  - var: CheckIfExistsPass
+        - if:
+            condition: '!CheckIfExistsPass && typeof CheckIfExistsPass === ''boolean'''
+            steps:
+              - click:
+                  shot: Contest page_3qwawy.dti.jpeg#602
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Zip
+              - type:
+                  shot: Contest page_owawp2.dti.jpeg#660
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Zip
+                  value: '${Zip}'
+        - assign:
+            shot: Contest page_q524xj.dti.jpeg#799
+            object: html.inputreset
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Reset1
+            properties:
+              - exist:
+                  - var: CheckIfExistsFail
+        - if:
+            condition: CheckIfExistsFail && typeof CheckIfExistsFail === "boolean"
+            steps:
+              - click:
+                  shot: Contest page_q524xj.dti.jpeg#799
+                  object: html.textarea
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: |-
+                                Describe what types of office
+                                            supplies you purchase:
+              - select:
+                  shot: Contest page_7p4exo.dti.jpeg#842
+                  object: html.select
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Position
+                  value: Professional Staff
+              - select:
+                  shot: Contest page_s3d4vo.dti.jpeg#904
+                  object: html.select
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Salary Range
+                  value: $25,001 to $50,000
+        - click:
+            shot: Contest page_g6xgkf.dti.jpeg#973
+            object: html.textarea
+            identifiers:
+              - properties:
+                  - label:
+                      - val: |-
+                          Describe what types of office
+                                      supplies you purchase:

@@ -1,0 +1,3 @@
+tests:
+  - UsageCheckSuite1.dts.yaml
+  - RunTestChild.dtx.yaml

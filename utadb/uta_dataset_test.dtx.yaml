@@ -1,0 +1,90 @@
+note: Generated from recorded traffic using edge 136.0.3240.76
+configuration:
+  profile: edge
+  vars:
+    APP_utadb_URL: http://civcez229.nonprod.hclpnp.com/aries-web/Samples/htmlControls/controls.html
+    Street: street
+    City: city
+    count: '${3}'
+steps:
+  - open:
+      url: http://tp-fvtapps1.nonprod.hclpnp.com/aries-web/samples/visionofficeproducts/contest.htm
+  - with:
+      steps:
+        - while:
+            condition: count > '0'
+            steps:
+              - assign:
+                  dataset: dataset_for_uta_test.csv
+                  vars:
+                    City:
+                      expr: City
+                      type: column
+                    Street:
+                      expr: Street
+                      type: column
+              - click:
+                  shot: Contest page_ygwlum.dti.jpeg#68
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Street
+              - type:
+                  shot: Contest page_fjnykp.dti.jpeg#126
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: Street
+                  value: '${Street}'
+              - click:
+                  shot: Contest page_w6mric.dti.jpeg#246
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: City
+              - type:
+                  shot: Contest page_bkea7x.dti.jpeg#362
+                  object: html.inputtext
+                  identifiers:
+                    - properties:
+                        - label:
+                            - val: City
+                  value: '${City}'
+              - assign:
+                  vars:
+                    count: ${count-1}
+        - select:
+            shot: Contest page_ef32rt.dti.jpeg#436
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Position
+            value: Management
+        - select:
+            shot: Contest page_ni2cyo.dti.jpeg#498
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Salary Range
+            value: $25,001 to $50,000
+        - click:
+            shot: Contest page_zbi2kw.dti.jpeg#560
+            object: html.inputradio
+            identifiers:
+              - properties:
+                  - value:
+                      - val: no
+        - click:
+            shot: Contest page_u44tzr.dti.jpeg#625
+            object: html.textarea
+            identifiers:
+              - properties:
+                  - label:
+                      - val: |-
+                          Describe what types of office
+                                      supplies you purchase:
