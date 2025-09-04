@@ -1,1 +1,2 @@
-# ots-fvt-assets-1
+# ots-fvt-assets
+Test assets created as a result of FVT automation
